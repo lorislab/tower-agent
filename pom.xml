@@ -108,10 +108,27 @@
 			<plugin>
 				<groupId>org.lorislab.maven</groupId>
 				<artifactId>messagebundles-plugin</artifactId>			
-			</plugin>			      
+			</plugin>
+			<plugin>
+				<groupId>org.lorislab.tower-base</groupId>
+				<artifactId>tower-base-maven-plugin</artifactId>
+			</plugin>						      
 		</plugins>    
 		<pluginManagement>
-			<plugins>			
+			<plugins>	
+				<plugin>
+					<groupId>org.lorislab.tower-base</groupId>
+					<artifactId>tower-base-maven-plugin</artifactId>			
+					<version>0.0.1-SNAPSHOT</version>
+					<executions>
+						<execution>
+							<phase>prepare-package</phase>
+							<goals>
+								<goal>build</goal>
+							</goals>
+						</execution>
+					</executions>					
+				</plugin>  									
 				<plugin>
 					<groupId>org.lorislab.maven</groupId>
 					<artifactId>jboss-server-plugin</artifactId>
