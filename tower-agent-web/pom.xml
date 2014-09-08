@@ -3,7 +3,7 @@
 	<modelVersion>4.0.0</modelVersion>
     
 	<parent>
-		<groupId>org.lorislab.tower-agent</groupId>
+		<groupId>org.lorislab.tower</groupId>
 		<artifactId>tower-agent</artifactId>
 		<version>0.0.1-SNAPSHOT</version>
 		<relativePath>../</relativePath>
@@ -15,18 +15,18 @@
 
 	<dependencies>  
 		<dependency>
-			<groupId>org.lorislab.tower-agent</groupId>
+			<groupId>org.lorislab.tower</groupId>
 			<artifactId>tower-agent-api</artifactId>
 			<version>${project.version}</version>
 		</dependency>		
 		<dependency>
-			<groupId>org.lorislab.tower-agent</groupId>
+			<groupId>org.lorislab.tower</groupId>
 			<artifactId>tower-agent-rs</artifactId>
 			<version>${project.version}</version>
 		</dependency>
 		<!-- BASE -->
 		<dependency>
-			<groupId>org.lorislab.tower-base</groupId>
+			<groupId>org.lorislab.tower</groupId>
 			<artifactId>tower-base-api</artifactId>
 		</dependency>				
 		<!-- JBOSS -->     
