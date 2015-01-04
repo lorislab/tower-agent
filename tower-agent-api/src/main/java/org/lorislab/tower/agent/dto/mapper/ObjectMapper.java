@@ -70,11 +70,11 @@ public final class ObjectMapper {
      */
     public static Version update(Version version, SearchResultItem release) {
         if (version != null && release != null) {
-            version.service = release.getService();
+            version.setService(release.getService());
             // add arm
             version = ObjectConverter.update(version, release.getPrm());
             // add manifest
-            version.manifest = release.getManifest();
+            version.setManifest(release.getManifest());
         }
         return version;
     }
@@ -89,7 +89,7 @@ public final class ObjectMapper {
     public static Version createVersion(AgentRequest request, SearchResultItem release) {
         Version result = ObjectConverter.create();
         if (request.uid != null) {
-            result.uid = request.uid;
+            result.setUid(request.uid);
         }
         result = update(result, release);
         return result;
